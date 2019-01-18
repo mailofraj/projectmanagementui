@@ -1,28 +1,19 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+<div class="container">
+    <header class="well left-align">
+        <h1>Project Manager</h1>
+    </header>
+</div>
+<div class="container">
+   
+<nav class="navbar navbar-default">
+<ul class="nav navbar-nav"> 
+<li class="navbar-brand" routerLink="/pmaddprj">Add project  </li>
+<li class="navbar-brand" routerLink="/pmaddtask"> Add task </li>
+<li class="navbar-brand" routerLink="/pmadduser"> Add User  </li>
+<li class="navbar-brand" routerLink="/pmviewtask">View task </li>
+</ul>
+  
+</nav>
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { PmviewtaskComponent } from './pmviewtask/pmviewtask.component';
-import { PmaddtaskComponent } from './pmaddtask/pmaddtask.component';
-import { PmadduserComponent } from './pmadduser/pmadduser.component';
-import { PmaddprjComponent } from './pmaddprj/pmaddprj.component';
-import { HttpClientModule } from '@angular/common/http';
-
-@NgModule({
-  declarations: [
-    AppComponent,
-    PmviewtaskComponent,
-    PmaddtaskComponent,
-    PmadduserComponent,
-    PmaddprjComponent    
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+</div>
+<router-outlet></router-outlet>
